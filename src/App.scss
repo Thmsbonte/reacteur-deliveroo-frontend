@@ -1,0 +1,170 @@
+/* Other rules */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 1205px;
+  margin: auto;
+}
+
+.Header {
+  border-bottom: solid 1px #25cdbd;
+  margin-bottom: 30px;
+  img {
+    height: 40px;
+    width: 160px;
+    margin: 9px 0;
+  }
+}
+
+.Restaurant-presentation {
+  display: flex;
+  margin-bottom: 30px;
+  .Restaurant-description {
+    flex: 2;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    p {
+      font-size: 19px;
+      color: #868a8a;
+      line-height: 29px;
+    }
+  }
+  .Restaurant-image {
+    height: 200px;
+    width: 350px;
+    margin-left: 30px;
+    img {
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+}
+
+.Main-background {
+  background-color: #f3f5f5;
+}
+
+.Main-content {
+  display: flex;
+  padding-top: 26px;
+}
+
+.Main-content-categories {
+  flex: 1;
+}
+
+.Meal-content {
+  margin-bottom: 26px;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.Meal-content-menus {
+  display: flex;
+  flex-wrap: wrap;
+  > :nth-child(2n) {
+    margin-left: 20px;
+  }
+  > :hover {
+    box-shadow: 3px 3px 5px 6px #ccc;
+  }
+}
+
+.Menu {
+  background-color: white;
+  height: 160px;
+  display: flex;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  width: calc(50% - 10px);
+  cursor: pointer;
+  // transition-duration: 0.3s;
+
+  .Menu-info {
+    flex: 1;
+    margin-right: 20px;
+    h3 {
+      font-size: 18px;
+      font-weight: 100;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+      color: #808484;
+      line-height: 21px;
+      height: 42px;
+      display: flex;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .Menu-notation {
+      span {
+        font-size: 18px;
+        color: #808484;
+        font-weight: 100;
+        margin-right: 20px;
+      }
+      strong {
+        color: #fe8000;
+        margin-left: 5px;
+        font-weight: 700;
+        .icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .Menu-picture {
+    height: 130px;
+    width: 130px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+
+.Basket-section {
+  width: 350px;
+  margin-left: 30px;
+  .Basket-content {
+    height: 185px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 30px;
+    button {
+      height: 50px;
+      background-color: #bac3c3;
+      border: none;
+      border-radius: 5px;
+      color: #8b9a9b;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .Basket-articles {
+      margin: auto;
+      p {
+        font-size: 16px;
+        color: #868a8a;
+      }
+    }
+  }
+}
