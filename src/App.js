@@ -14,7 +14,9 @@ const App = () => {
 
   const getRestInfo = async () => {
     try {
-      const restInfo = await axios.get("http://localhost:3100/restaurant/get");
+      const restInfo = await axios.get(
+        "https://reacteur-deliveroo-backend.herokuapp.com/restaurant/get"
+      );
       setData(restInfo.data);
       setIsLoading(false);
     } catch (error) {
