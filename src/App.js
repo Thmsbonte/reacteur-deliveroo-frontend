@@ -4,9 +4,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import RestaurantPresentation from "./components/RestaurantPresentation";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import MainContent from "./components/MainContent";
-library.add(faStar);
+library.add(faStar, faPlus, faMinus);
 
 const App = () => {
   const [data, setData] = useState([]);

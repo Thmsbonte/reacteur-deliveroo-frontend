@@ -1,7 +1,9 @@
 import Basket from "./Basket";
 import MealContent from "./MealContent";
+import { useState } from "react";
 
 const MainContent = ({ categoriesInfo }) => {
+  const [basket, setBasket] = useState([]);
   return (
     <div className="Main-background">
       <div className="Main-content container">
@@ -9,13 +11,18 @@ const MainContent = ({ categoriesInfo }) => {
           {categoriesInfo.map((item, index) => {
             return (
               item.meals.length > 0 && (
-                <MealContent categoryInfo={item} key={index} />
+                <MealContent
+                  categoryInfo={item}
+                  key={index}
+                  basket={basket}
+                  setBasket={setBasket}
+                />
               )
             );
           })}
         </div>
 
-        <Basket />
+        <Basket basket={basket} setBasket={setBasket} />
       </div>
     </div>
   );

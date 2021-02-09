@@ -1,8 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Menu = ({ menuInfo }) => {
+const Menu = ({ menuInfo, basket, setBasket }) => {
+  const handleOnClick = () => {
+    const newBasket = [...basket];
+    let newItem = true;
+    console.log(menuInfo.id);
+    newBasket.forEach((item) => {
+      if (item.article.id === menuInfo.id) {
+        item.quantity++;
+        newItem = false;
+      }
+    });
+    newItem && newBasket.push({ article: menuInfo, quantity: 1 });
+    setBasket(newBasket);
+  };
+
   return (
-    <div className="Menu">
+    <div className="Menu" onClick={handleOnClick}>
       <div className="Menu-info">
         <h3>{menuInfo.title}</h3>
         {menuInfo.description && <p>{menuInfo.description}</p>}
